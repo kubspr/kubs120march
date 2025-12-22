@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUBS 120 MARCH | Digital Heritage Wall</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0; padding:0;">
+
+<div id="kubs-120-march-wrap" style="display:block; width:100%; box-sizing:border-box;">
+<style>
+#kubs-120-march-wrap {
+    --kubs-burgundy:#8d0023;
+    --gold-primary:#bf953f;
+    --gold-light:#fcf6ba;
+    --brick-shadow:rgba(0,0,0,0.6);
+    background-color:var(--kubs-burgundy);
+    color:var(--gold-primary);
+    font-family:'Noto Serif KR', serif;
+    text-align:center;
+}
+
+/* layout */
+.brick-wall-container{
+    background:linear-gradient(rgba(141,0,35,.95),rgba(141,0,35,.95)),
+               url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    padding:60px 20px;
+    min-height:100vh;
+}
+
+/* gold text */
+.gold-text{
+    background:linear-gradient(to bottom,#fcf6ba 0%,#bf953f 22%,#fbf5b7 45%,#aa771c 50%,#fcf6ba 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+}
+
+/* brick */
+.real-brick{
+    background:linear-gradient(145deg,#b8860b,#8b6508);
+    border-radius:2px;
+    border-top:3px solid rgba(252,246,186,.4);
+    border-left:3px solid rgba(252,246,186,.3);
+    border-right:4px solid rgba(0,0,0,.5);
+    border-bottom:4px solid rgba(0,0,0,.6);
+    box-shadow:6px 6px 12px var(--brick-shadow);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+.real-brick:hover{
+    transform:translateY(-5px);
+    box-shadow:10px 15px 25px rgba(0,0,0,.7);
+}
+
+.engraved-name{
+    color:#1a0000;
+    font-weight:800;
+}
+
+/* grid */
+.grid-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+/* sizes */
+.founder-size{width:300px;height:160px;}
+.guardian-size{width:220px;height:120px;}
+.visionary-size{width:140px;height:75px;}
+
+/* search */
+.search-box{
+    max-width:500px;
+    margin:0 auto 60px;
+    background:#2a000a;
+    border:2px solid var(--gold-primary);
+    display:flex;
+}
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:none;
+    color:#fff;
+    padding:12px 20px;
+    font-size:16px;
+    outline:none;
+}
+
+/* section */
+.section-title{
+    font-size:28px;
+    letter-spacing:5px;
+    margin-top:80px;
+    text-transform:uppercase;
+}
+.tier-subcopy{
+    margin-top:10px;
+    color:#eee;
+    opacity:.85;
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:14px;
+}
+
+/* helpers */
+.brick-hidden{display:none!important;}
+.search-highlight{
+    animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(252,246,186,.7);}
+    70%{box-shadow:0 0 0 15px rgba(252,246,186,0);}
+    100%{box-shadow:0 0 0 0 rgba(252,246,186,0);}
+}
+</style>
+
+<div class="brick-wall-container">
+
+  <!-- Header -->
+  <p style="letter-spacing:4px;font-size:14px;color:#fcf6ba;opacity:.7;">
+    KOREA UNIVERSITY BUSINESS SCHOOL
+  </p>
+  <h1 class="gold-text" style="font-size:48px;margin:0;">KUBS 120 MARCH</h1>
+
+  <p style="color:#eee;font-style:italic;margin-top:20px;">
+    “교우님의 이름은 고려대 경영대학을 지탱하는 가장 견고한 초석입니다.”
+  </p>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input id="kubs-search-input" placeholder="성함(또는 일부)을 입력하세요" onkeyup="filterBricks()">
+  </div>
+
+  <!-- FOUNDERS -->
+  <div id="bricks-foundations">
+    <div class="section-title gold-text">THE FOUNDERS · 설립자</div>
+    <div class="tier-subcopy">KUBS 120 MARCH의 첫걸음을 함께 연 분들</div>
+    <div class="grid-container">
+      <div class="real-brick founder-size" data-name="김학장">
+        <h2 class="engraved-name">김 학 장</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARDIANS -->
+  <div id="bricks-guardians">
+    <div class="section-title gold-text" style="font-size:22px;">THE GUARDIANS · 수호자</div>
+    <div class="tier-subcopy">가치와 전통을 지켜온 든든한 동행자</div>
+    <div class="grid-container">
+      <div class="real-brick guardian-size" data-name="박동문">
+        <h3 class="engraved-name">박 동 문</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISIONARIES -->
+  <div id="bricks-visionaries">
+    <div class="section-title gold-text" style="font-size:18px;">THE VISIONARIES · 비전 동행자</div>
+    <div class="tier-subcopy">다음 세대를 향한 비전을 함께하는 분들</div>
+    <div class="grid-container">
+      <div class="real-brick visionary-size" data-name="정진">
+        <h4 class="engraved-name">정*진</h4>
+      </div>
+    </div>
+  </div>
+
+  <div id="kubs-no-results" style="display:none;color:#fcf6ba;padding:40px;">
+    입력하신 성함의 기부자를 찾을 수 없습니다.
+  </div>
+
+</div>
+
+<script>
+function filterBricks(){
+  const input=document.getElementById('kubs-search-input').value.replace(/\s/g,'');
+  const bricks=document.querySelectorAll('.real-brick');
+  let visible=0;
+
+  bricks.forEach(b=>{
+    const name=b.dataset.name||'';
+    if(!input||name.includes(input)){
+      b.classList.remove('brick-hidden');
+      b.classList.toggle('search-highlight',!!input);
+      visible++;
+    }else{
+      b.classList.add('brick-hidden');
+      b.classList.remove('search-highlight');
+    }
+  });
+
+  document.getElementById('kubs-no-results').style.display =
+    visible===0?'block':'none';
+}
+</script>
+
+</div>
+</body>
+</html>
