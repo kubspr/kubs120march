@@ -283,12 +283,23 @@
 
 </div>
 
+ <!-- FOOTER -->
+  <div class="kubs-footer">
+    <div class="kubs-footer-title">KUBS DONOR SERVICE CENTER</div>
+    <div class="kubs-footer-contact">
+      경영대학 기부자서비스센터<br>
+      ☎ 02-3290-1364 &nbsp;|&nbsp; 📱 010-2996-1905
+    </div>
+  </div>
+
+</div>
+
 <script>
 function filterBricks(){
   const input=(document.getElementById('kubs-search-input').value||'').replace(/\s/g,'');
   const bricks=document.querySelectorAll('.real-brick');
   let visible=0;
-  bricks.forEach(b=>{
+👉  bricks.forEach(b=>{
     const name=(b.getAttribute('data-name')||'').replace(/\s/g,'');
     if(!input||name.includes(input)){
       b.classList.remove('brick-hidden');
