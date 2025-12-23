@@ -13,65 +13,64 @@
 <div id="kubs-120-march-wrap" style="display:block; width:100%; box-sizing:border-box;">
 <style>
 #kubs-120-march-wrap {
-    --kubs-burgundy:#8d0023;
-    --gold-primary:#bf953f;
-    --gold-light:#fcf6ba;
-    --brick-shadow:rgba(0,0,0,0.6);
-    background-color:var(--kubs-burgundy);
-    color:var(--gold-primary);
-    font-family:'Noto Serif KR', serif;
-    text-align:center;
+  --kubs-burgundy:#8d0023;
+  --gold-primary:#bf953f;
+  --brick-shadow:rgba(0,0,0,0.6);
+  background-color:var(--kubs-burgundy);
+  color:var(--gold-primary);
+  font-family:'Noto Serif KR', serif;
+  text-align:center;
 }
 
 /* layout */
 .brick-wall-container{
-    background:linear-gradient(rgba(141,0,35,.95),rgba(141,0,35,.95)),
-               url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
-    padding:60px 20px;
-    min-height:100vh;
+  background:linear-gradient(rgba(141,0,35,.95),rgba(141,0,35,.95)),
+             url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+  padding:60px 20px;
+  min-height:100vh;
 }
 
 /* gold text */
 .gold-text{
-    background:linear-gradient(to bottom,#fcf6ba 0%,#bf953f 22%,#fbf5b7 45%,#aa771c 50%,#fcf6ba 100%);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    font-weight:bold;
+  background:linear-gradient(to bottom,#fcf6ba 0%,#bf953f 22%,#fbf5b7 45%,#aa771c 50%,#fcf6ba 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
 }
 
 /* brick */
 .real-brick{
-    background:linear-gradient(145deg,#b8860b,#8b6508);
-    border-radius:2px;
-    border-top:3px solid rgba(252,246,186,.4);
-    border-left:3px solid rgba(252,246,186,.3);
-    border-right:4px solid rgba(0,0,0,.5);
-    border-bottom:4px solid rgba(0,0,0,.6);
-    box-shadow:6px 6px 12px var(--brick-shadow);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    transition:.3s;
+  background:linear-gradient(145deg,#b8860b,#8b6508);
+  border-radius:2px;
+  border-top:3px solid rgba(252,246,186,.4);
+  border-left:3px solid rgba(252,246,186,.3);
+  border-right:4px solid rgba(0,0,0,.5);
+  border-bottom:4px solid rgba(0,0,0,.6);
+  box-shadow:6px 6px 12px var(--brick-shadow);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:.3s;
 }
 .real-brick:hover{
-    transform:translateY(-5px);
-    box-shadow:10px 15px 25px rgba(0,0,0,.7);
+  transform:translateY(-5px);
+  box-shadow:10px 15px 25px rgba(0,0,0,.7);
 }
 
 .engraved-name{
-    color:#1a0000;
-    font-weight:800;
+  color:#1a0000;
+  font-weight:800;
 }
 
 /* grid */
 .grid-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    max-width:1100px;
-    margin:40px auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  max-width:1100px;
+  margin:40px auto;
 }
 
 /* sizes */
@@ -81,90 +80,84 @@
 
 /* search */
 .search-box{
-    max-width:500px;
-    margin:0 auto 60px;
-    background:#2a000a;
-    border:2px solid var(--gold-primary);
-    display:flex;
+  max-width:500px;
+  margin:40px auto 60px;
+  background:#2a000a;
+  border:2px solid var(--gold-primary);
+  display:flex;
 }
 .search-box input{
-    flex:1;
-    background:transparent;
-    border:none;
-    color:#fff;
-    padding:12px 20px;
-    font-size:16px;
-    outline:none;
+  flex:1;
+  background:transparent;
+  border:none;
+  color:#fff;
+  padding:12px 20px;
+  font-size:16px;
+  outline:none;
 }
 
 /* section */
 .section-title{
-    font-size:28px;
-    letter-spacing:5px;
-    margin-top:80px;
-    text-transform:uppercase;
+  font-size:28px;
+  letter-spacing:5px;
+  margin-top:80px;
+  text-transform:uppercase;
 }
 .tier-subcopy{
-    margin-top:10px;
-    color:#eee;
-    opacity:.85;
-    font-family:'Noto Sans KR',sans-serif;
-    font-size:14px;
+  margin-top:10px;
+  color:#eee;
+  opacity:.85;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:14px;
 }
 
 /* helpers */
 .brick-hidden{display:none!important;}
 .search-highlight{
-    animation:pulse 1.5s infinite;
+  animation:pulse 1.5s infinite;
 }
 @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(252,246,186,.7);}
-    70%{box-shadow:0 0 0 15px rgba(252,246,186,0);}
-    100%{box-shadow:0 0 0 0 rgba(252,246,186,0);}
+  0%{box-shadow:0 0 0 0 rgba(252,246,186,.7);}
+  70%{box-shadow:0 0 0 15px rgba(252,246,186,0);}
+  100%{box-shadow:0 0 0 0 rgba(252,246,186,0);}
 }
 
-/* ===== 캠페인 현황 보드 ===== */
+/* ===== 캠페인 현황 ===== */
 .campaign-stats{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin:50px auto 10px;
-    flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin:50px auto 10px;
+  flex-wrap:wrap;
 }
 .stat-card{
-    background:rgba(0,0,0,0.25);
-    border:1px solid rgba(191,149,63,0.5);
-    padding:24px 36px;
-    min-width:240px;
+  background:rgba(0,0,0,0.25);
+  border:1px solid rgba(191,149,63,0.5);
+  padding:24px 36px;
+  min-width:240px;
 }
 .stat-label{
-    font-family:'Noto Sans KR',sans-serif;
-    font-size:14px;
-    color:#fcf6ba;
-    opacity:0.85;
-    letter-spacing:1px;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:14px;
+  color:#fcf6ba;
 }
 .stat-value{
-    margin-top:10px;
-    font-size:36px;
-    font-weight:700;
+  margin-top:10px;
+  font-size:36px;
+  font-weight:700;
 }
-.stat-unit{
-    font-size:16px;
-    margin-left:4px;
-}
+.stat-unit{font-size:16px;margin-left:4px;}
 .stat-date{
-    margin-top:14px;
-    font-size:12px;
-    color:#fcf6ba;
-    opacity:0.7;
-    font-family:'Noto Sans KR',sans-serif;
+  margin-top:14px;
+  font-size:12px;
+  color:#fcf6ba;
+  opacity:0.7;
+  font-family:'Noto Sans KR',sans-serif;
 }
 </style>
 
 <div class="brick-wall-container">
 
-  <!-- Header -->
   <p style="letter-spacing:4px;font-size:14px;color:#fcf6ba;opacity:.7;">
     KOREA UNIVERSITY BUSINESS SCHOOL
   </p>
@@ -174,65 +167,96 @@
     “경영대학 120년의 발자취, 그 다음은 여러분의 이름으로 이어집니다.”
   </p>
 
-  <!-- 🔶 캠페인 현황 -->
+  <!-- 캠페인 현황 -->
   <div class="campaign-stats">
     <div class="stat-card">
       <div class="stat-label">CAMPAIGN PARTICIPANTS</div>
-      <div class="stat-value gold-text">
-        248<span class="stat-unit">명</span>
-      </div>
+      <div class="stat-value gold-text">248<span class="stat-unit">명</span></div>
     </div>
     <div class="stat-card">
       <div class="stat-label">TOTAL CONTRIBUTION</div>
-      <div class="stat-value gold-text">
-        12.4<span class="stat-unit">억원</span>
-      </div>
+      <div class="stat-value gold-text">12.4<span class="stat-unit">억원</span></div>
     </div>
   </div>
   <div class="stat-date">※ 기준일: 2025. 3. 1.</div>
-
+  </div>
+  
   <!-- Search -->
   <div class="search-box">
     <input id="kubs-search-input" placeholder="성함(또는 일부)을 입력하세요" onkeyup="filterBricks()">
   </div>
 
-  <!-- FOUNDERS / GUARDIANS / VISIONARIES -->
-  <!-- (윤정님 기존 코드 그대로 유지 – 아래 동일) -->
-
   <!-- FOUNDERS -->
   <div id="bricks-foundations">
     <div class="section-title gold-text">THE FOUNDERS · 설립자</div>
     <div class="tier-subcopy">KUBS 120 MARCH의 첫걸음을 함께 연 분들</div>
-
     <div class="grid-container">
       <div class="real-brick founder-size" data-name="허준홍">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">경영 84</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">경영 84</span>
         <h2 class="engraved-name" style="font-size:32px;">허 준 홍</h2>
       </div>
       <div class="real-brick founder-size" data-name="SJG홀딩스">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">75 Econ</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">75 Econ</span>
         <h2 class="engraved-name" style="font-size:32px;">S J G 홀 딩 스</h2>
       </div>
       <div class="real-brick founder-size" data-name="(주)토러스자산운용">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
         <h2 class="engraved-name" style="font-size:32px;">(주)토러스자산운용</h2>
       </div>
       <div class="real-brick founder-size" data-name="대현회계법인">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
         <h2 class="engraved-name" style="font-size:32px;">대현회계법인</h2>
       </div>
       <div class="real-brick founder-size" data-name="홍흥석">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
         <h2 class="engraved-name" style="font-size:32px;">홍 흥 석</h2>
       </div>
       <div class="real-brick founder-size" data-name="배홍기">
-        <span style="font-size:12px;color:#1a0000;opacity:0.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
+        <span style="font-size:12px;color:#1a0000;opacity:.6;font-weight:bold;margin-bottom:10px;">경영 81</span>
         <h2 class="engraved-name" style="font-size:32px;">배 홍 기</h2>
       </div>
     </div>
   </div>
 
-  <!-- (GUARDIANS / VISIONARIES 이하 동일) -->
+  <!-- GUARDIANS -->
+  <div id="bricks-guardians">
+    <div class="section-title gold-text" style="font-size:22px;">THE GUARDIANS · 수호자</div>
+    <div class="tier-subcopy">가치와 전통을 지켜온 든든한 동행자</div>
+    <div class="grid-container">
+      <div class="real-brick guardian-size" data-name="박동문">
+        <span style="font-size:10px;color:#1a0000;opacity:.6;margin-bottom:5px;">90 Eng</span>
+        <h3 class="engraved-name" style="font-size:20px;">박 동 문</h3>
+      </div>
+      <div class="real-brick guardian-size" data-name="최선배">
+        <span style="font-size:10px;color:#1a0000;opacity:.6;margin-bottom:5px;">01 BBA</span>
+        <h3 class="engraved-name" style="font-size:20px;">최 선 배</h3>
+      </div>
+      <div class="real-brick guardian-size" data-name="한교우">
+        <span style="font-size:10px;color:#1a0000;opacity:.6;margin-bottom:5px;">85 PA</span>
+        <h3 class="engraved-name" style="font-size:20px;">한 교 우</h3>
+      </div>
+      <div class="real-brick guardian-size" data-name="오동문">
+        <span style="font-size:10px;color:#1a0000;opacity:.6;margin-bottom:5px;">99 Soc</span>
+        <h3 class="engraved-name" style="font-size:20px;">오 동 문</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISIONARIES -->
+  <div id="bricks-visionaries">
+    <div class="section-title gold-text" style="font-size:18px;">THE VISIONARIES · 비전 동행자</div>
+    <div class="tier-subcopy">다음 세대를 향한 비전을 함께하는 분들</div>
+    <div class="grid-container">
+      <div class="real-brick visionary-size" data-name="정진"><h4 class="engraved-name">정*진</h4></div>
+      <div class="real-brick visionary-size" data-name="강수"><h4 class="engraved-name">강*수</h4></div>
+      <div class="real-brick visionary-size" data-name="윤희"><h4 class="engraved-name">윤*희</h4></div>
+      <div class="real-brick visionary-size" data-name="임현"><h4 class="engraved-name">임*현</h4></div>
+      <div class="real-brick visionary-size" data-name="조준"><h4 class="engraved-name">조*준</h4></div>
+      <div class="real-brick visionary-size" data-name="오영"><h4 class="engraved-name">오*영</h4></div>
+      <div class="real-brick visionary-size" data-name="김우"><h4 class="engraved-name">김*우</h4></div>
+      <div class="real-brick visionary-size" data-name="이아"><h4 class="engraved-name">이*아</h4></div>
+    </div>
+  </div>
 
   <div id="kubs-no-results" style="display:none;color:#fcf6ba;padding:40px;">
     입력하신 성함의 기부자를 찾을 수 없습니다.
@@ -242,24 +266,21 @@
 
 <script>
 function filterBricks(){
-  const input = (document.getElementById('kubs-search-input').value || '').replace(/\s/g,'');
-  const bricks = document.querySelectorAll('.real-brick');
-  let visible = 0;
-
+  const input=(document.getElementById('kubs-search-input').value||'').replace(/\s/g,'');
+  const bricks=document.querySelectorAll('.real-brick');
+  let visible=0;
   bricks.forEach(b=>{
-    const name = (b.getAttribute('data-name') || '').replace(/\s/g,'');
-    if(!input || name.includes(input)){
+    const name=(b.getAttribute('data-name')||'').replace(/\s/g,'');
+    if(!input||name.includes(input)){
       b.classList.remove('brick-hidden');
-      b.classList.toggle('search-highlight', !!input);
+      b.classList.toggle('search-highlight',!!input);
       visible++;
     }else{
       b.classList.add('brick-hidden');
       b.classList.remove('search-highlight');
     }
   });
-
-  document.getElementById('kubs-no-results').style.display =
-    (visible===0) ? 'block' : 'none';
+  document.getElementById('kubs-no-results').style.display=(visible===0)?'block':'none';
 }
 </script>
 
