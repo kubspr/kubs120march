@@ -299,6 +299,7 @@ function filterBricks(){
   const input=(document.getElementById('kubs-search-input').value||'').replace(/\s/g,'');
   const bricks=document.querySelectorAll('.real-brick');
   let visible=0;
+  
   bricks.forEach(b=>{
     const name=(b.getAttribute('data-name')||'').replace(/\s/g,'');
     if(!input||name.includes(input)){
