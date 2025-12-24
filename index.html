@@ -11,25 +11,63 @@
 
 <div id="kubs-120-march-wrap">
 <style>
+/* ===== Base ===== */
 #kubs-120-march-wrap{
   --kubs-burgundy:#8d0023;
   --gold-primary:#bf953f;
+  --gold-light:#fcf6ba;
   background:var(--kubs-burgundy);
   color:var(--gold-primary);
   font-family:'Noto Serif KR', serif;
   text-align:center;
 }
+
+/* layout */
 .brick-wall-container{
   background:linear-gradient(rgba(141,0,35,.95),rgba(141,0,35,.95)),
   url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
   padding:60px 20px 40px;
 }
+
+/* text */
 .gold-text{
   background:linear-gradient(to bottom,#fcf6ba,#bf953f,#fcf6ba);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   font-weight:bold;
 }
+.section-title{
+  font-size:28px;
+  margin-top:80px;
+  letter-spacing:4px;
+}
+.tier-subcopy{
+  margin-top:8px;
+  color:#eee;
+  opacity:.85;
+  font-family:'Noto Sans KR',sans-serif;
+  font-size:14px;
+}
+
+/* search */
+.search-box{
+  max-width:500px;
+  margin:30px auto 50px;
+  border:2px solid var(--gold-primary);
+  display:flex;
+  background:#2a000a;
+}
+.search-box input{
+  flex:1;
+  padding:12px;
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  outline:none;
+}
+
+/* grid & bricks */
 .grid-container{
   display:flex;
   flex-wrap:wrap;
@@ -49,35 +87,11 @@
   transition:.3s;
 }
 .real-brick:hover{transform:translateY(-5px);}
+.engraved-name{color:#1a0000;font-weight:800;}
+
 .founder-size{width:300px;height:160px;}
 .guardian-size{width:220px;height:120px;}
 .visionary-size{width:140px;height:75px;}
-.engraved-name{color:#1a0000;font-weight:800;}
-.section-title{
-  font-size:28px;
-  margin-top:80px;
-  letter-spacing:4px;
-}
-.tier-subcopy{
-  color:#eee;
-  font-size:14px;
-  opacity:.85;
-}
-.search-box{
-  max-width:500px;
-  margin:30px auto 50px;
-  border:2px solid var(--gold-primary);
-  display:flex;
-}
-.search-box input{
-  flex:1;
-  padding:12px;
-  background:transparent;
-  border:none;
-  color:#fff;
-  font-size:16px;
-}
-.brick-hidden{display:none!important;}
 
 /* stats */
 .campaign-stats{
@@ -94,7 +108,34 @@
 }
 .stat-value{font-size:34px;font-weight:700;}
 .stat-unit{font-size:16px;}
-.stat-date{font-size:12px;color:#fcf6ba;opacity:.7;margin-top:10px}
+.stat-date{
+  font-size:12px;
+  color:#fcf6ba;
+  opacity:.7;
+  margin-top:10px;
+  font-family:'Noto Sans KR',sans-serif;
+}
+
+/* supporters */
+.supporters-container{
+  max-width:900px;
+  margin:40px auto 0;
+}
+.supporters-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px 28px;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.supporter-name{
+  font-size:14px;
+  color:#fcf6ba;
+  white-space:nowrap;
+}
+
+/* helpers */
+.hidden{display:none!important;}
 
 /* footer */
 .kubs-footer{
@@ -103,38 +144,48 @@
   border-top:1px solid rgba(191,149,63,.3);
   font-family:'Noto Sans KR',sans-serif;
 }
-.kubs-footer-contact{color:#eee;font-size:14px;line-height:1.8}
+.kubs-footer-contact{
+  color:#eee;
+  font-size:14px;
+  line-height:1.8;
+}
 
 /* mobile */
 @media(max-width:600px){
   h1.gold-text{font-size:34px;}
   .founder-size,.guardian-size{width:100%;height:120px;}
   .visionary-size{width:calc(50% - 6px);}
+  .supporter-name{font-size:13px;}
 }
 </style>
 
 <div class="brick-wall-container">
 
-<p style="letter-spacing:4px;font-size:14px;color:#fcf6ba;opacity:.7;">KOREA UNIVERSITY BUSINESS SCHOOL</p>
+<p style="letter-spacing:4px;font-size:14px;color:#fcf6ba;opacity:.7;">
+  KOREA UNIVERSITY BUSINESS SCHOOL
+</p>
 <h1 class="gold-text">KUBS 120 MARCH</h1>
-<p style="color:#eee;font-style:italic;">“경영대학 120년의 발자취, 그 다음은 여러분의 이름으로 이어집니다.”</p>
+
+<p style="color:#eee;font-style:italic;">
+  “경영대학 120년의 발자취, 그 다음은 여러분의 이름으로 이어집니다.”
+</p>
 
 <!-- stats -->
 <div class="campaign-stats">
   <div class="stat-card">
     <div>CAMPAIGN PARTICIPANTS</div>
-    <div class="stat-value gold-text">178<span class="stat-unit">명</span></div>
+    <div class="stat-value gold-text">248<span class="stat-unit">명</span></div>
   </div>
   <div class="stat-card">
     <div>TOTAL CONTRIBUTION</div>
-    <div class="stat-value gold-text">1,988,597,231<span class="stat-unit">원</span></div>
+    <div class="stat-value gold-text">12.4<span class="stat-unit">억원</span></div>
   </div>
 </div>
-<div class="stat-date">※ 기준일: 2025. 12. 24.</div>
+<div class="stat-date">※ 기준일: 2025. 3. 1.</div>
 
 <!-- search -->
 <div class="search-box">
-  <input id="kubs-search-input" placeholder="성함(또는 일부)을 입력하세요" onkeyup="filterBricks()">
+  <input id="kubs-search-input" placeholder="성함(또는 일부)을 입력하세요" onkeyup="filterAll()">
 </div>
 
 <!-- FOUNDERS -->
@@ -159,8 +210,8 @@
   <div class="real-brick guardian-size" data-name="양영재단"><h3 class="engraved-name">양 영 재 단</h3></div>
   <div class="real-brick guardian-size" data-name="나현승"><h3 class="engraved-name">나 현 승</h3></div>
   <div class="real-brick guardian-size" data-name="류강석"><h3 class="engraved-name">류 강 석</h3></div>
-  <div class="real-brick guardian-size" data-name="EMBA 17대 총여성교우회"><h3 class="engraved-name">EMBA 17대 총여성교우회</h3></div>
-  <div class="real-brick guardian-size" data-name="EMBA 총교우회"><h3 class="engraved-name">EMBA 총교우회</h3></div>
+  <div class="real-brick guardian-size" data-name="EMBA17총여성교우회"><h3 class="engraved-name">EMBA 17대 총여성교우회</h3></div>
+  <div class="real-brick guardian-size" data-name="EMBA총교우회"><h3 class="engraved-name">EMBA 총교우회</h3></div>
   <div class="real-brick guardian-size" data-name="김정희"><h3 class="engraved-name">김 정 희</h3></div>
   <div class="real-brick guardian-size" data-name="문정빈"><h3 class="engraved-name">문 정 빈</h3></div>
   <div class="real-brick guardian-size" data-name="김종대"><h3 class="engraved-name">김 종 대</h3></div>
@@ -171,28 +222,46 @@
 <div class="section-title gold-text" style="font-size:18px;">THE VISIONARIES</div>
 <div class="tier-subcopy">다음 세대를 향한 비전을 함께하는 분들</div>
 <div class="grid-container">
-  <div class="real-brick visionary-size" data-name="정진"><h4 class="engraved-name">정*진</h4></div>
-  <div class="real-brick visionary-size" data-name="강수"><h4 class="engraved-name">강*수</h4></div>
-  <div class="real-brick visionary-size" data-name="윤희"><h4 class="engraved-name">윤*희</h4></div>
-  <div class="real-brick visionary-size" data-name="임현"><h4 class="engraved-name">임*현</h4></div>
+  <div class="real-brick visionary-size" data-name="정진">정*진</div>
+  <div class="real-brick visionary-size" data-name="강수">강*수</div>
+  <div class="real-brick visionary-size" data-name="윤희">윤*희</div>
+  <div class="real-brick visionary-size" data-name="임현">임*현</div>
+</div>
+
+<!-- SUPPORTERS -->
+<div class="section-title gold-text" style="font-size:16px;">THE SUPPORTERS</div>
+<div class="tier-subcopy">KUBS 120 MARCH에 뜻을 보태주신 소중한 동행자</div>
+<div class="supporters-container">
+  <div class="supporters-list">
+    <span class="supporter-name" data-name="김민수">김민수</span>
+    <span class="supporter-name" data-name="이서연">이서연</span>
+    <span class="supporter-name" data-name="박지훈">박지훈</span>
+    <span class="supporter-name" data-name="최은지">최은지</span>
+    <span class="supporter-name" data-name="정현우">정현우</span>
+    <span class="supporter-name" data-name="윤소희">윤소희</span>
+  </div>
 </div>
 
 <!-- footer -->
 <div class="kubs-footer">
   <div class="kubs-footer-contact">
     경영대학 기부자서비스센터<br>
-    ☎ 02-3290-1364 | 📱 010-2996-1905
+    ☎ 02-3290-1364 &nbsp;|&nbsp; 📱 010-2996-1905
   </div>
 </div>
 
 </div>
 
 <script>
-function filterBricks(){
-  const input=(document.getElementById('kubs-search-input').value||'').replace(/\s/g,'');
-  document.querySelectorAll('.real-brick').forEach(b=>{
-    const name=(b.dataset.name||'').replace(/\s/g,'');
-    b.classList.toggle('brick-hidden', input && !name.includes(input));
+function filterAll(){
+  const input = (document.getElementById('kubs-search-input').value || '')
+                .replace(/\s/g,'')
+                .toUpperCase();
+
+  const items = document.querySelectorAll('.real-brick, .supporter-name');
+  items.forEach(el=>{
+    const name = (el.dataset.name || '').replace(/\s/g,'').toUpperCase();
+    el.classList.toggle('hidden', input && !name.includes(input));
   });
 }
 </script>
